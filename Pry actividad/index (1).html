@@ -1,0 +1,192 @@
+<html>
+<head>
+
+<title>Formulario</title>
+
+
+
+
+
+<link rel="stylesheet" href="./resources/css/normalize.css">
+<link rel="stylesheet" href="./resources/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script language="javascript">
+
+   //nombre, apellido, numero de cedula, genero, numero de celular
+
+function comprobar()
+{
+   var nombre = document.formu.nombre.value;
+   var apellido = document.formu.apellido.value;
+   var edad = document.formu.edad.value;
+   var cedula = document.formu.cedula.value;
+   var celular = document.formu.celular.value;
+
+
+   if (nombre.length > 20)
+   {
+      alert("Tu nombre es demasiado grande");
+      return false;
+   }
+
+   if (apellido.length > 20)
+   {
+      alert("Tu apellido es demasiado grande");
+      return false;
+   }
+
+
+
+
+   if (celular.length =! 10)
+   {
+      alert("Tu número de celular debe tener 10 digitos");
+      return false;
+   }
+
+   
+
+    
+}
+
+</script>
+</head>
+
+
+
+
+<body>
+
+   
+
+<!--- ---   ------   ------   ---  --->
+<form action="index.html" method="post" name="formu" id="formu" onsubmit=" return comprobar()">
+
+
+
+    <!--- ---   ------   ------   ---  --->
+   <div class="space"></div>
+    <!--- ---   ------   ------   ---  --->
+
+
+
+     <!--- ---   ------   ------   ---  --->
+      <div class="contenedor">
+
+         
+               <!--- ---   ------   ------   ---  --->
+               <div class="row">
+                  
+                  <div class="col-10">
+                     
+                     <div class="header">
+                        <h1 class="headertext">SENA</h1>
+
+                        <ul class="button">
+                           <li><a href="resources/views/sobrenosotros.html">Sobre nosotros</a></li>
+                           <li><a href="resources/views/sedes.html">Sedes</a></li>
+                           <li><a href="resources/views/contactanos.html">Contactanos</a></li>
+                           <li><a href="index.html" class="active">Registrarse</a></li>
+                           
+                           
+                           </ul>
+
+                      </div>
+
+                      
+                     
+            
+                     <h2>FORMULARIO</h2>
+
+                       <div class="form-group">
+                        
+                           <label  class="text-uppercase">Tu nombre:</label>
+                           <input type="text" name="nombre" value="" class="form-control text-uppercase"  placeholder="Ingresa tu nombre" required="">
+                        
+                           <label  class="text-uppercase">Tu Apellido:</label>
+                           <input type="text" name="apellido" value="" class="form-control text-uppercase"  placeholder="Ingresa tu apellido" required="">
+                       
+                        </div>
+
+                       <div class="form-group">
+                         <center><label  class="text-uppercase">Tu edad:</label></center>
+                         <input type="text" name="edad" value="" size="2" maxlength="2" class="form-control text-uppercase"  placeholder="Ingresa tu edad" required="">
+                       </div>
+
+
+
+                       <div class="form-group">
+                        <center> <p>Selecciona tu tipo de documento:</p> </center>
+                        <center>
+                           <select name="tipodo">
+
+                              <option value="rc">Registro Civil </option>
+                              <option value="ti">Tarjeta de identidad</option>
+                              <option value="cc">Cédula de ciudadanía</option>
+                              <option value="ce">Cédula de extranjeria</option>
+                              <option value="pa">Pasaporte</option>
+                           
+                           </select>
+                              </center>
+                      </div>
+
+                         <div class="form-group">
+                         <center><label  class="text-uppercase">Número de identificación:</label></center>
+                         <input type="number" name="identi" value="" class="form-control text-uppercase"  placeholder="Ingresa tu número de identificación" required="">
+                       </div>
+
+                       <div class="form-group">
+                         <center><label  class="text-uppercase">Número de celular:</label></center>
+                         <input type="number" name="celular" value="" class="form-control text-uppercase"  placeholder="Ingresa tu número de celular" required="">
+                       </div>
+
+                       <div class="form-group">
+                        <center><label  class="text-uppercase">Tu Correo Electrónico:</label></center>
+                        <input type="email" name="correo" value="" class="form-control text-uppercase"  placeholder="Ingresa tu correo electrónico" required="">
+                      </div>
+
+                       <div class="form-group">
+                        <center> <p>Selecciona tu género:</p> </center>
+                        <center>
+                                 <input type="radio" id="hombre" name="genero" value="hombre">
+                                 <label class="genero" for="hombre" > Hombre  </label><br>
+                                 <input type="radio" id="mujer" name="genero" value="mujer">
+                                 <label class="genero" for="mujer">Mujer</label><br>
+                                 <input type="radio" id="otro" name="genero" value="otro">
+                                 <label class="genero" for="otro">Otro</label>
+                              </center>
+                      </div>
+
+                      <div class="form-group">
+                        <center> <p>Selecciona tu estado civil:</p> </center>
+                        <center>
+                                 <input type="radio" id="soltero" name="estado" value="soltero">
+                                 <label class="genero" for="soltero" > Solter@  </label><br>
+                                 <input type="radio" id="casado" name="estado" value="casado">
+                                 <label class="genero" for="casado">Casad@</label><br>
+                                 <input type="radio" id="viudo" name="estado" value="otro">
+                                 <label class="genero" for="viudo">Viud@</label><br>
+                                 <input type="radio" id="otro" name="estado" value="otro">
+                                 <label class="genero" for="otro">Otro</label>
+                              </center>
+                      </div>
+
+
+                        <center> <input  type="submit"  value="Enviar" class="btn btn-primary text-uppercase"></center>
+
+                  </div>
+               </div>
+               
+
+
+      </div>
+      
+
+</form>
+
+
+
+</body>
+</html>
